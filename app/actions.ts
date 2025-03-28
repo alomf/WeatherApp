@@ -3,6 +3,8 @@
 import { WeatherData } from "@/types/weather";
 import { z } from "zod";
 
+
+// This schema defines the structure of the weather data we expect to receive from the OpenWeather API.
 const weatherSchema = z.object({
     name: z.string(),
     main: z.object({
@@ -22,6 +24,7 @@ const weatherSchema = z.object({
     }),
 });
 
+// This function fetches weather data from the OpenWeather API based on the provided city name.
 export async function getWeatherData(city: string): Promise<{ data?: WeatherData; error?: string }> {
     try {
         if (!city.trim()) {

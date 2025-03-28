@@ -1,3 +1,5 @@
+// Weather Data Types
+
 export interface WeatherData {
     name: string;
     main: {
