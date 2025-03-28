@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeatherApp
+
+![WeatherApp image](public/appimage.png)
 
 ## Getting Started
+First, install all of the neccessary packages:
 
-First, run the development server:
+```bash
+npm i
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The App has been created using the Next.js template with TypeScript, Tailwind, Shadcn, Zod and OpenWeatherAPI
 
-## Learn More
+## Reasoning
 
-To learn more about Next.js, take a look at the following resources:
+Next.js provided the best template for me to get started initially, with the installations of Tailwind and more being available. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Shadcn allowed me to use custom built components, such as the Button, Card and Input components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Zod allowed me to use the incoming data from OpenWeatherAPI and convert it into a schema.
 
-## Deploy on Vercel
+## Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Improving the forecasting ability, currently it shows the days forecast - I would like to implement it to show a weeks forecast.
+2. Testing - currently there are no unit tests involved, as the app becomes more complex ensuring these tests are in place will become vital.
+3. UI - As stated previously, the app currently shows the day's weather and the UI would need to be updated to showcase a forecast.
